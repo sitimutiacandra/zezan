@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zezan Birtday🤍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0b1226;
+    --navy:#152242;
+    --navy-2:#1f3159;
+    --gold:#e8c27d;
+    --blush:#f3b9c4;
+    --cream:#f8f1e6;
+    --muted:#9fb0d6;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{
+    height:100%;
+    font-family:'Quicksand', sans-serif;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(243,185,196,0.08), transparent 40%),
+      radial-gradient(ellipse at 80% 0%, rgba(232,194,125,0.08), transparent 45%),
+      linear-gradient(180deg, var(--deep) 0%, var(--navy) 55%, var(--navy-2) 100%);
+    color:var(--cream);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+    padding:8vh 6vw;
+  }
+  .eyebrow{
+    font-family:'Caveat', cursive;
+    font-size:clamp(1.6rem,5vw,2.1rem);
+    color:var(--blush);
+    margin-bottom:.3rem;
+  }
+  h1{
+    font-size:clamp(1.3rem,4.5vw,1.8rem);
+    font-weight:600;
+    max-width:22ch;
+    margin-bottom:1.8rem;
+  }
+  #qrcode{
+    background:var(--cream);
+    padding:16px;
+    border-radius:16px;
+    box-shadow:0 20px 40px -14px rgba(0,0,0,.55);
+    display:inline-block;
+  }
+  .hint{
+    margin-top:1.6rem;
+    font-size:.9rem;
+    color:var(--muted);
+    max-width:28ch;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     CARA PAKAI FILE INI
+     ------------------------------------------------------------
+     1. Upload semua file (index.html, style.css, script.js, qr.html,
+        folder assets) ke hosting gratis, misalnya Netlify, Vercel,
+        atau GitHub Pages.
+     2. Setelah dapat link-nya (contoh: https://ulangtahun-zezan.netlify.app/index.html),
+        ganti nilai SITE_URL di bawah ini dengan link tersebut.
+     3. Buka qr.html ini, screenshot QR-nya, lalu kirim ke pacarmu —
+        atau tunjukin layarnya langsung biar dia scan pakai kamera HP.
+     4. Begitu di-scan, dia akan langsung diarahkan ke index.html,
+        mulai dari layar "Masukkan kode rahasia".
+     ============================================================ -->
+
+<div class="eyebrow">Untuk kamu</div>
+<h1>Scan untuk membuka kejutannya</h1>
+<div id="qrcode"></div>
+<p class="hint">Ketuk lama lalu buka lewat kamera HP kamu</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  // GANTI INI dengan link index.html setelah kamu upload ke hosting
+  const SITE_URL = "https://sitimutiacandra.github.io/birthday-for-you/";
+
+  new QRCode(document.getElementById('qrcode'), {
+    text: SITE_URL,
+    width: 220,
+    height: 220,
+    colorDark: "#152242",
+    colorLight: "#f8f1e6"
+  });
+</script>
+</body>
+</html>

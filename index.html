@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zezan Birtday🤍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<!-- ============================================================
+     CARA MENGEDIT WEBSITE INI
+     ------------------------------------------------------------
+     1. Semua data (nama, tanggal, pesan, kode PIN, judul lagu) ada
+        di file script.js, di dalam objek CONFIG paling atas.
+     2. Untuk foto: buat folder "assets" sefolder dengan file ini,
+        taruh foto kamu di sana (misal assets/foto1.jpg), lalu tulis
+        nama filenya di CONFIG.photos pada script.js.
+     3. Untuk musik: taruh file mp3 di folder assets, isi
+        CONFIG.musicSrc di script.js.
+     4. Untuk video: taruh file mp4 di folder assets, isi
+        CONFIG.videoSrc di script.js.
+     5. QR code sekarang ADA DI FILE TERPISAH: qr.html. Itu yang
+        kamu kirim/screenshot ke pacarmu — begitu dia scan, dia
+        langsung masuk ke index.html (mulai dari layar PIN).
+        Buka qr.html, ganti SITE_URL di dalamnya setelah kamu
+        upload website ke hosting (Netlify/Vercel/GitHub Pages).
+     ============================================================ -->
+ 
+<div id="stars"></div>
+<button id="soundToggle" title="Musik on/off">🔊</button>
+<div id="progress"></div>
+ 
+<div id="app">
+ 
+  <section class="scene active" id="scene-pin">
+    <div class="eyebrow">Untuk kamu</div>
+    <h1 class="title" id="pinTitle">Masukkan kode rahasia</h1>
+    <div id="pinDots"></div>
+    <div id="keypad"></div>
+  </section>
+ 
+  <section class="scene" id="scene-gift">
+    <p class="copy" style="margin-bottom:1.6rem;">Ketuk kotak hadiah untuk membukanya</p>
+    <div class="gift-wrap" id="giftWrap">
+      <div class="ribbon"></div>
+      <div class="gift"></div>
+    </div>
+  </section>
+ 
+  <section class="scene" id="scene-note">
+    <div class="photo-frame" id="photoFrame">🖼️</div>
+    <div class="notecard" id="noteCard"></div>
+    <div class="cake">🎂</div>
+    <button class="link-btn" data-next>Lanjut</button>
+  </section>
+ 
+  <section class="scene" id="scene-envelope">
+    <h1 class="title" id="envTitle"></h1>
+    <div class="envelope" id="envelope">
+      <div class="env-body"></div>
+      <div class="env-flap"></div>
+      <div class="seal">🌹</div>
+    </div>
+    <div class="hint">Ketuk untuk membuka</div>
+  </section>
+ 
+  <section class="scene" id="scene-letter">
+    <div class="eyebrow">Untukmu,</div>
+    <div class="letter-box">
+      <p class="copy copy--wide" id="letterText"></p>
+    </div>
+    <button class="link-btn" data-next>Lanjut</button>
+  </section>
+ 
+  <section class="scene" id="scene-moon">
+    <h1 class="title">Your My Moon</h1>
+    <div class="moon"></div>
+    <div class="polaroids" id="polaroids"></div>
+    <button class="link-btn" data-next>Lanjut</button>
+  </section>
+ 
+  <section class="scene" id="scene-calendar">
+    <div class="eyebrow">Hari lahirnya orang favoritku</div>
+    <div class="calendar">
+      <div class="cal-month" id="calMonth"></div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+    <p class="hint" style="margin-top:1.6rem;">Nyalakan musiknya dulu, ya!</p>
+    <div class="player">
+      <div class="cover"></div>
+      <div class="meta">
+        <div class="t" id="songTitle"></div>
+        <div class="a" id="songArtist"></div>
+      </div>
+      <button id="playBtn">▶</button>
+    </div>
+    <button class="link-btn" data-next>Lanjut</button>
+  </section>
+ 
+  <section class="scene" id="scene-video">
+    <div class="eyebrow">Hari ini semua tentang kamu</div>
+    <video id="videoPlayer" controls playsinline></video>
+    <button class="link-btn" data-next>Lanjut</button>
+  </section>
+ 
+  <section class="scene" id="scene-final">
+    <div class="heart">💗</div>
+    <h1 class="title" id="finalTitle"></h1>
+    <p class="copy" id="finalCopy"></p>
+  </section>
+ 
+</div>
+ 
+<audio id="bgm" loop></audio>
+ 
+<script src="script.js"></script>
+</body>
+</html>
